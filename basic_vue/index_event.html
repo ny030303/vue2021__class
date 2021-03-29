@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue start page</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    
+</head>
+<body>
+    <div id="app">
+        <button @click="myalert">click me</button><br>
+        {{year}}<br>
+        <button @click="plus">더하기</button>
+        <button @click="minus">빼기</button>
+        
+        <form @submit="submit">
+            <input type="text"><br>
+            <input type="submit" value="제출">
+        </form>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+              year: 2021
+
+            },
+            methods: {
+                myalert() {
+                    alert('hello');
+                },
+                plus() {
+                    this.year++;
+                },
+                minus() {
+                    this.year--;
+                },
+                submit() {
+                    alert('submitted');
+                    console.log("hi");
+                }
+            }
+        })
+    </script>
+</body>
+</html>
