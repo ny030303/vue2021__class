@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue start page</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    
+</head>
+<body>
+    <div id="app">
+        <template v-if="show">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </template>
+        <div  v-if="number == 2">Hi~~~</div>
+        <div  v-else-if="number == 3">힘들어</div>
+        <div v-else>no</div>
+        <button @click="increaseNumber">increase number</button>
+        <button @click="toggleShow">Toggle</button>
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+              show: true,
+              number: 2
+                // false면 브라우저 출력 x => div 태그가 랜더링
+            },
+            methods: {
+                toggleShow() {
+                    this.show = !this.show;
+                },
+                increaseNumber() {
+                    this.number++;
+                }
+            }
+        })
+    </script>
+</body>
+</html>

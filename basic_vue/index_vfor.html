@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue start page</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+</head>
+
+<body>
+    <div id="app">
+        {{people[0].name}} {{people[0].name}} <br>
+        {{people[1].name}} {{people[1].name}}<br>
+        {{people[2].name}} {{people[2].name}}<br>
+        {{people[3].name}} {{people[3].name}}<br>
+        <br>
+        <div v-for="person in people" :key="person.name + '-' + person">
+            {{person.name}} {{person.age}} {{person.tel}}
+        </div>
+        
+    </div>
+
+    <script>
+        new Vue({
+            el: '#app',
+            data: {
+                people: [
+                    { name: 'kim', age: 20 , tel: "000-0000"},
+                    { name: 'hong', age: 21 , tel: "000-0000"},
+                    { name: 'park', age: 22 , tel: "000-0000"},
+                    { name: 'lee', age: 23 , tel: "000-0000"},
+                ]
+
+            },
+            methods: {
+
+            }
+        })
+    </script>
+</body>
+
+</html>
