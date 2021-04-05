@@ -1,5 +1,5 @@
 <template>
-<div class="card-body">
+    <div class="card-body">
         <h3>{{title}}</h3>
         <br>
 
@@ -7,7 +7,7 @@
             v-text: <span v-text="text"></span><br>
             v-html: <span v-html="text"></span><br>
             v-once: <span v-once>{{text}}</span><br>
-            v-pre: <span></span><br>
+            <!-- v-pre: <span></span><br> -->
             <br>
             <button>Change</button>
             <button>Change</button>
@@ -31,19 +31,22 @@
         <br>
       
     </div>
-  </div>
+  </div>  
 </template>
+  
+
 
 <script>
 export default {
     data() {
-      return {
-        title: "2.Binding",
-        text: '<b>asdf</b>'
-      }
+        return {
+            title: '2.Binding',
+            text: '<b>Hello World</b>'
+        }
     }
 }
 </script>
+
 
 <style scoped>
 
